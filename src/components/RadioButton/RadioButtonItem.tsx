@@ -60,7 +60,7 @@ class RadioButtonItem extends React.Component<Props> {
   static displayName = 'RadioButton.Item';
 
   render() {
-    const { value, label, style, onPress, status } = this.props;
+    const { value, label, style, onPress, status, ...rest } = this.props;
 
     return (
       <RadioButtonContext.Consumer>
@@ -74,6 +74,7 @@ class RadioButtonItem extends React.Component<Props> {
                   value,
                 })
               }
+              {...rest}
             >
               <View style={[styles.container, style]} pointerEvents="none">
                 <Text>{label}</Text>

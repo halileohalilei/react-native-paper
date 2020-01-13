@@ -86,7 +86,6 @@ class RadioButtonIOS extends React.Component<Props> {
 
           return (
             <TouchableRipple
-              {...rest}
               borderless
               rippleColor={rippleColor}
               onPress={
@@ -108,6 +107,7 @@ class RadioButtonIOS extends React.Component<Props> {
               accessibilityStates={disabled ? ['disabled'] : []}
               accessibilityLiveRegion="polite"
               style={styles.container}
+              {...rest}
             >
               <View style={{ opacity: checked ? 1 : 0 }}>
                 <Icon

@@ -128,7 +128,6 @@ class RadioButtonAndroid extends React.Component<Props, State> {
 
           return (
             <TouchableRipple
-              {...rest}
               borderless
               rippleColor={rippleColor}
               onPress={
@@ -150,6 +149,7 @@ class RadioButtonAndroid extends React.Component<Props, State> {
               accessibilityStates={disabled ? ['disabled'] : []}
               accessibilityLiveRegion="polite"
               style={styles.container}
+              {...rest}
             >
               <Animated.View
                 style={[
